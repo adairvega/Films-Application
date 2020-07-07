@@ -1,12 +1,12 @@
+import 'package:films/src/widgets/card_swiper_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Movies in theaters'),
+          title: Text('Movies'),
           //centerTitle: true, #In case of Center title required
           backgroundColor: Colors.indigoAccent,
           actions: <Widget>[
@@ -21,23 +21,8 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _swiperTarjetas() {
-    return Container(
-      padding: EdgeInsets.only(top: 10.0),
-      width: double.infinity,
-      height: 300.0,
-      child: Swiper(
-        itemBuilder: (BuildContext context, int index) {
-          return new Image.network(
-            "http://via.placeholder.com/350x150",
-            fit: BoxFit.fill,
-          );
-        },
-        itemCount: 3,
-        //pagination: new SwiperPagination(),
-        //control: new SwiperControl(),
-        itemWidth: 200.0,
-        layout: SwiperLayout.STACK,
-      ),
+    return CardSwiper(
+      peliculas: [1, 2, 3, 4, 5],
     );
   }
 }
