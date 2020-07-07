@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class PeliculasProvier {
   //String _apiKey: introduce your api key signing up in https://www.themoviedb.org/
-  String _apiKey = '57646533ff20f872ad220eca3ec84d9c';
+  String _apiKey = '67646533ff20f872ad220eca3ec84d9c';
   String _url = 'api.themoviedb.org';
   String _language = 'es-ES';
 
