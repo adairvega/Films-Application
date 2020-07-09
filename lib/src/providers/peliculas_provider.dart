@@ -11,6 +11,9 @@ class PeliculasProvier {
   String _language = 'fr-FR';
 
   int _popularesPage = 0;
+
+  bool _cargando = false;
+
   List<Pelicula> _populares = new List();
 
   //Creation de stream
@@ -42,6 +45,10 @@ class PeliculasProvier {
   }
 
   Future<List<Pelicula>> getPopulares() async {
+    if (_cargando) return [];
+
+    _cargando = true;
+
     _popularesPage++;
 
     final url = Uri.https(_url, '3/movie/popular', {
@@ -56,6 +63,7 @@ class PeliculasProvier {
 
     popularesSnik(_populares);
 
+    _cargando = false;
     return resp;
   }
 }
