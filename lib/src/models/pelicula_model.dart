@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 class Peliculas {
   List<Pelicula> items = new List();
 
@@ -69,7 +67,7 @@ class Pelicula {
     if (posterPath == null) {
       return 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/No_image_available_450_x_600.svg/450px-No_image_available_450_x_600.svg.png';
     } else {
-      return 'https://image.tmdb.org/t/p/w500/$posterPath';
+      return 'https://image.tmdb.org/t/p/original/$posterPath';
     }
   }
 
@@ -77,7 +75,7 @@ class Pelicula {
     if (backdropPath == null) {
       return 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/No_image_available_450_x_600.svg/450px-No_image_available_450_x_600.svg.png';
     } else {
-      return 'https://image.tmdb.org/t/p/w500/$backdropPath';
+      return 'https://image.tmdb.org/t/p/original/$backdropPath';
     }
   }
 }
