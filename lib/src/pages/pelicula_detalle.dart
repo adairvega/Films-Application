@@ -68,7 +68,7 @@ class PeliculaDetalle extends StatelessWidget {
                 height: 150.0,
               ),
             ),
-            tag: pelicula.id,
+            tag: pelicula.uniqueId,
           ),
           SizedBox(
             width: 20.0,

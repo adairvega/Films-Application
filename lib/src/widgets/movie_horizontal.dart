@@ -37,6 +37,8 @@ class MovieHorizontal extends StatelessWidget {
   }
 
   Widget _crearTarjeta(BuildContext context, Pelicula pelicula) {
+    pelicula.uniqueId = '${pelicula.id}-poster';
+
     final peliculaTarjeta = Container(
       margin: EdgeInsets.only(right: 15.0),
       child: Column(
@@ -51,7 +53,7 @@ class MovieHorizontal extends StatelessWidget {
                 height: 138.0,
               ),
             ),
-            tag: pelicula.id,
+            tag: pelicula.uniqueId,
           ),
           SizedBox(
             height: 2.0,
