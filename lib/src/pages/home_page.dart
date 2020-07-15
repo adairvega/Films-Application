@@ -1,4 +1,5 @@
 import 'package:films/src/providers/peliculas_provider.dart';
+import 'package:films/src/search/search_delegate.dart';
 import 'package:films/src/widgets/card_swiper_widget.dart';
 import 'package:films/src/widgets/movie_horizontal.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,15 @@ class HomePage extends StatelessWidget {
           //centerTitle: true, #In case of Center title required
           backgroundColor: Colors.indigoAccent,
           actions: <Widget>[
-            IconButton(icon: Icon(Icons.search), onPressed: () {}),
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                showSearch(
+                  context: context,
+                  delegate: DataSearch(),
+                );
+              },
+            ),
           ],
         ),
         body: SafeArea(
